@@ -34,6 +34,46 @@ export default function createRoutes(store) {
         importModules.catch(errorLoading);
       },
     }, {
+      path: '/looking',
+      name: 'looking',
+      getComponent(nextState, cb) {
+        const importModules = Promise.all([
+          System.import('containers/Looking/reducer'),
+          System.import('containers/Looking/sagas'),
+          System.import('containers/Looking'),
+        ]);
+
+        const renderRoute = loadModule(cb);
+
+        importModules.then(([reducer, sagas, component]) => {
+          injectReducer('looking', reducer.default);
+          injectSagas(sagas.default);
+          renderRoute(component);
+        });
+
+        importModules.catch(errorLoading);
+      },
+    }, {
+      path: '/sharing',
+      name: 'sharing',
+      getComponent(nextState, cb) {
+        const importModules = Promise.all([
+          System.import('containers/Sharing/reducer'),
+          System.import('containers/Sharing/sagas'),
+          System.import('containers/Sharing'),
+        ]);
+
+        const renderRoute = loadModule(cb);
+
+        importModules.then(([reducer, sagas, component]) => {
+          injectReducer('sharing', reducer.default);
+          injectSagas(sagas.default);
+          renderRoute(component);
+        });
+
+        importModules.catch(errorLoading);
+      },
+    }, {
       path: '*',
       name: 'notfound',
       getComponent(nextState, cb) {
