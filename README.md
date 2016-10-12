@@ -1,5 +1,7 @@
 #bermuda-web
 
+![mockup](./docs/requirement/phase1/mockup.png)
+
 ##Overview
 An online sharing marketplace.
 
