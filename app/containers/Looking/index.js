@@ -14,6 +14,20 @@ import ItemBoxList from '../../components/ItemBoxList';
 import ItemOnMap from '../../components/ItemOnMap';
 
 export class Looking extends React.Component { // eslint-disable-line react/prefer-stateless-function
+
+  componentDidMount() {
+    this.lists = firebase.database().ref('lists');
+    this.lists.on('value', (data) => {
+      // real-time listener, full list response on changes
+      console.log('firebase:on:value', data.val());
+      this.setState(data.val());
+    }).bind(this);
+  }
+
+  componentWillUnmount() {
+    this.lists.off();
+  }
+
   render() {
     return (
       <div className={`${styles.looking} columns`} style={{ padding: '10px 0' }}>

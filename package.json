@@ -154,6 +154,9 @@
       "react/self-closing-comp": 0,
       "require-yield": 0
     },
+    "globals": {
+      "firebase": false
+    },
     "settings": {
       "import/resolver": {
         "webpack": {
@@ -211,6 +214,7 @@
     "compression": "1.6.2",
     "cross-env": "2.0.1",
     "express": "4.14.0",
+    "firebase": "^3.4.1",
     "fontfaceobserver": "2.0.4",
     "immutable": "3.8.1",
     "intl": "1.2.4",
@@ -227,6 +231,7 @@
     "react-router": "2.8.1",
     "react-router-redux": "4.0.5",
     "react-router-scroll": "0.3.2",
+    "reactfire": "^1.0.0",
     "redux": "3.6.0",
     "redux-immutable": "3.0.8",
     "redux-saga": "0.11.1",
