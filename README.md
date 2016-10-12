@@ -11,7 +11,7 @@ An online sharing marketplace.
 3. enter `http://localhost:3000` in the browser
 
 ##Communication
-*Trello board ([https://trello.com/b/PbUVNrgT/bermuda-web](https://trello.com/b/PbUVNrgT/bermuda-web))
+* Trello board ([https://trello.com/b/PbUVNrgT/bermuda-web](https://trello.com/b/PbUVNrgT/bermuda-web))
 
 ##Technology stack
 * react-boilerplate ([https://github.com/mxstbr/react-boilerplate](https://github.com/mxstbr/react-boilerplate))
