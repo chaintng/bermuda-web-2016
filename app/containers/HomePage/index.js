@@ -12,6 +12,7 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import messages from './messages';
+import { Link } from 'react-router';
 
 export default class HomePage extends React.Component { // eslint-disable-line react/prefer-stateless-function
 
@@ -19,6 +20,10 @@ export default class HomePage extends React.Component { // eslint-disable-line r
     return (
       <h1>
         <FormattedMessage {...messages.header} />
+        <ul>
+          <li><Link to="/looking">Looking around</Link></li>
+          <li><Link to="/sharing">Love is share</Link></li>
+        </ul>
       </h1>
     );
   }
