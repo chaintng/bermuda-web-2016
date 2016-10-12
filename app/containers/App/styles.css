@@ -24,3 +24,7 @@
   background: #0059ce;
   color: white;
 }
+
+.container > div {
+  padding: 20px;
+}

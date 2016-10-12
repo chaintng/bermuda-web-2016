@@ -18,13 +18,13 @@ export default class HomePage extends React.Component { // eslint-disable-line r
 
   render() {
     return (
-      <h1>
-        <FormattedMessage {...messages.header} />
-        <ul>
-          <li><Link to="/looking">Looking around</Link></li>
-          <li><Link to="/sharing">Love is share</Link></li>
-        </ul>
-      </h1>
+      <div style={{ textAlign: 'center' }}>
+        <h1 className="title"><FormattedMessage {...messages.header} /></h1>
+        <div className="columns">
+          <div className="column"><span className="button is-large"><Link to="/looking">Looking around</Link></span></div>
+          <div className="column"><span className="button is-large"><Link to="/sharing">Love is share</Link></span></div>
+        </div>
+      </div>
     );
   }
 }
